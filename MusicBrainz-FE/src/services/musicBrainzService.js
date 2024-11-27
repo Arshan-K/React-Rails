@@ -13,7 +13,7 @@ export const fetchBandsByCity = async (city) => {
 
     const normalizedCity = capitalizeCity(city);
 
-    let backendResponse = await axios.get(`http://203.161.58.56/api/v1/bands/search?city=${normalizedCity}`);
+    let backendResponse = await axios.get(`https://react-rails-u4ek.onrender.com/api/v1/bands/search?city=${normalizedCity}`);
     return backendResponse.data.bands || [];
   } catch (error) {
     console.error("Error fetching bands from backend, falling back to MusicBrainz API:", error);
